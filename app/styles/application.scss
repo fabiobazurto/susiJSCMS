@@ -1,0 +1,45 @@
+.active-cyan-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-cyan input[type=text] {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-purple-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #ce93d8;
+    box-shadow: 0 1px 0 0 #ce93d8;
+}
+
+#main-image-back{
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+#main-loop-desc{
+    height:350px;
+    background-color: rgba(0,0,0,.8);
+    padding-left: 40px;
+    padding-right: 150px;
+    text-align: justify;    
+}
+
+.navbar{
+    margin-bottom:0px;
+}
+ .cf-img-poster{
+//  Resize perfectly images
+  width: 180px;
+  min-width: 25%;
+  height: 250px;//250
+  object-fit: cover;
+  object-position: 0% 50%;
+//    overflow: hidden;
+  transition: 1s all;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+ .carousel-control{
+     border:none;
+     font-size: 7em;
+ }

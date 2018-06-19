@@ -1,0 +1,33 @@
+{{#bs-navbar type=(if inverse 'inverse') fluid=fluid collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
+  <div class="navbar-header">
+    {{navbar.toggle}}
+    {{#link-to "index" class="navbar-brand"}}SUSICMS{{/link-to}}
+  </div>
+
+  <form class="navbar-form navbar-right">
+   <div class="md-form active-purple active-purple-2 mb-3">
+    <span class="glyphicon glyphicon-search"></span>
+    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+   </div>     
+  </form>
+
+  {{#navbar.content}}
+    {{#navbar.nav as |nav|}}
+      {{#nav.dropdown as |dd|}}
+        {{#dd.toggle}}Categories <span class="caret"></span>{{/dd.toggle}}
+        {{#dd.menu as |ddm|}}
+          {{#ddm.item}}{{#ddm.link-to "index"}}Action{{/ddm.link-to}}{{/ddm.item}}
+          {{#ddm.item}}{{#ddm.link-to "index"}}Horror{{/ddm.link-to}}{{/ddm.item}}
+        {{/dd.menu}}
+      {{/nav.dropdown}}
+    {{/navbar.nav}}
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+
+   
+  {{/navbar.content}}
+{{/bs-navbar}}
+

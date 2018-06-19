@@ -1,0 +1,31 @@
+{{#carousel-container transitionInterval=400 as |ui controls|}}
+  <div class="carousel-body">
+    {{#each results  as |movie|}}
+      {{#ui.item}}
+        <div id="main-image-back" style="background-image:url({{movie.frontend_image}});background-size:cover;     background-position: center; ">
+          <div class="row">
+            <div class="col-sm-12 col-md-6"></div>
+            <div id="main-loop-desc" class="col-sm-12 col-md-6">
+               <h1>{{movie.title}}</h1>
+               <article>{{movie.synopsis}}</article>
+                {{link-to "Read more" "index" class="btn btn-info"}}
+            </div>
+          </div>
+        </div>
+    {{/ui.item}}
+ {{/each}}
+  </div>
+
+  <button class="carousel-control left" onclick={{controls.previous}}>
+&lsaquo;    
+  </button>
+  <button class="carousel-control right" onclick={{controls.next}}>
+&rsaquo;
+  </button>
+{{/carousel-container}}
+
+
+<header>
+</header>
+
+

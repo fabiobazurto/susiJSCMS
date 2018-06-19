@@ -1,0 +1,13 @@
+<div class="container">
+<h1>{{title}}</h1>
+
+  <div class="row">
+
+{{#each results  as |movie|}}
+    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 ">
+      <img src="{{movie.poster}}" class="cf-img-poster img-responsive"/>
+    </div>
+{{/each}}
+
+  </div>
+</div>
